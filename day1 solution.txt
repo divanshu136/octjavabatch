@@ -1,0 +1,276 @@
+q1. 
+public class Matha {
+    public static void main(String[] args) {
+
+        int a= -5;
+        int b  = 8;
+        int c= 6;
+        System.out.println(a+b*c);
+    System.out.println(-5+8*6);
+        
+    }
+}
+
+q2.
+public class Mathb {
+
+     public static void main(String[] args) {
+        
+        int a =20;
+        int b=4;
+        System.out.println(a+b);
+        System.out.println(a*b);
+        System.out.println(a-b);
+    
+        System.out.println(a/b);
+        System.out.println(a%b);
+       
+
+    } 
+        
+    }
+
+q3. 
+import java.util.*;
+public class Mathc {
+    
+     public static void main(String[] args) {
+     Scanner sc = new Scanner(System.in);
+
+     System.out.print("Input first number: ");
+    // int num1 = sc.nextInt();
+    float num1=sc.nextFloat();
+
+     System.out.print("Input 2nd number: ");
+     //int num2 = sc.nextInt();
+     float num2=sc.nextFloat();
+
+     System.out.print("Input 3rd number: ");
+    // int num3 = sc.nextInt();
+
+    float num3=sc.nextFloat();
+     System.out.println("Average of three numbers is: " + 
+     (num1 + num2 + num3 ) / 3);
+
+
+
+        
+
+    }
+        
+    }
+
+q4. 
+public class Mathd {
+   public static void main(String[] args) {
+
+        int temp;
+        int x = 100;
+        int y = 200;
+
+        temp = x;
+        x =y;
+        y = temp;
+      
+        System.out.println(x);
+        System.out.println(y);
+
+    }
+}
+
+q5
+import java.util.*;
+public class Mathe {
+
+    public static void main(String[] args){
+        
+
+{
+      int num, i, count=0;
+
+      Scanner s = new Scanner(System.in);
+      
+      System.out.print("Enter a Number: ");
+      num = s.nextInt();
+      
+      for(i=2; i<num; i++)
+      {
+         if(num%i == 0)
+         {
+            count++;
+            break;
+         }
+      }
+      
+      if(count==0)
+         System.out.println("\nIt is a Prime Number.");
+      else
+         System.out.println("\nIt is not a Prime Number.");
+   }
+}
+
+
+    }
+
+q6
+//Write a Java program to print the ascii value of a given character.  
+ import java.util.*;
+
+public class Mathf {
+    public static void main(String[] args)
+    {
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Enter any character here");
+
+        char ch=sc.next().charAt(0);
+        int i=ch;
+        System.out.println(i);
+    }
+
+}  
+
+q7
+public class Mathg {
+    public static void main(String[]args){
+       
+
+        for (int i = 1; i <= 100; i++)
+        {
+            if(i%3==0 && i%5 !=0)
+            System.out.println(i+" :"+"Fizz");
+            else if(i%5==0 && i%3 !=0)
+            System.out.println(i+" :"+"Buzz");
+            else if(i%3==0 && i%5==0)
+            System.out.println(i+":"+"fizz buzz");
+
+            
+        }
+    
+        
+        
+        
+
+    }
+}
+
+
+q8
+import java.util.*;
+public class Main{
+
+    public static int checkSum(int num)
+    {
+      String s=String.valueOf(num);
+      char[] arr=s.toCharArray();
+      int sum=0;
+      for(int i=0;i<arr.length;i++)
+      {
+        int num1=Character.getNumericValue(arr[i]);
+        if(num1%2==0)
+        {
+
+        }
+        else{
+             sum=sum+num1;
+        }
+      }
+      if(sum%2 !=0)
+      {
+        return 1;
+      }
+      else{return -1;}
+
+    
+    }
+    public static void main(String[]args) {
+
+   Scanner sc=new Scanner(System.in);
+        System.out.println("enter the number");
+        int num=sc.nextInt();
+        int sum=checkSum(num);
+        if(sum==1)
+        {
+          System.out.println("Sum of odd digits is odd");
+        }
+        else {
+          System.out.println("Sum of odd digits is even");
+        }
+    }
+
+}
+
+
+q9
+import java.util.*;
+class UserMainCode
+{
+   public static int sumOfSquaresOfEvenDigits(int num)
+   {
+     String s=String.valueOf(num);
+     char[] arr=s.toCharArray();
+     int sum=0;
+     for(int i=0;i<arr.length;i++)
+     {
+       int num1=Character.getNumericValue(arr[i]);
+       if(num1%2==0)
+       {
+           int square=(int) java.lang.Math.pow(num1, 2);
+      
+           sum=sum+square;
+        
+       }
+      
+     }
+    return sum;
+   }
+}
+public class Main {
+     public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        System.out.println("enter the number");
+        int num=sc.nextInt();
+        int sum=UserMainCode.sumOfSquaresOfEvenDigits(num);
+        System.out.println(sum);
+
+        
+    }
+    
+}
+
+q10
+package day1;
+import java.util.*;
+class UserMainCode1{
+    public static String getLargestNumber(String s1)
+    {
+        int max=0;
+        String s2=new String();
+        StringTokenizer t=new StringTokenizer(s1," ");
+        while(t.hasMoreTokens()){
+        String s3=t.nextToken();
+        int n=s3.length();
+        if(n>max){
+        max=n;
+        s2=s3;}
+        }
+        return s2;
+    }
+
+}
+public class Main3
+{
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        String s1= sc.nextLine();
+        System.out.println(UserMainCode1.getLargestNumber(s1));
+        }
+       
+    
+}
+
+
+
+
+
+    
+
